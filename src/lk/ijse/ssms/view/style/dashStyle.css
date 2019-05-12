@@ -1,0 +1,21 @@
+.logoutbtn{
+    -fx-background-color: white;
+    -fx-text-fill: red;
+}
+
+.btnadd{
+    -fx-background-color: darkcyan;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+
+}
+.btndelete{
+    -fx-background-color: sandybrown;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.btnchange{
+    -fx-background-color: #207235;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}

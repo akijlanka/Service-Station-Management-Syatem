@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="1257.0" style="-fx-background-color: #053843;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.WaitAppointmentFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="11.0" text="Current Appointment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblApp" layoutX="15.0" layoutY="40.0" onMouseClicked="#selectApp" prefHeight="417.0" prefWidth="500.0">
+        <columns>
+          <TableColumn prefWidth="45.0" text="AID" />
+          <TableColumn prefWidth="132.99996948242188" text="Cus Name" />
+            <TableColumn prefWidth="95.00003051757812" text="Date" />
+            <TableColumn prefWidth="127.0" text="TPNum" />
+            <TableColumn prefWidth="97.0" text="Bike Num" />
+        </columns>
+      </TableView>
+      <Separator layoutX="194.0" layoutY="19.0" prefHeight="0.0" prefWidth="321.0" />
+      <Label layoutX="530.0" layoutY="10.0" text="Make Service" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="647.0" layoutY="18.0" prefHeight="3.0" prefWidth="598.0" />
+      <Label layoutX="534.0" layoutY="40.0" text="Service Information" textFill="#bfb1b1" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="554.0" layoutY="70.0" text="Service ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="554.0" layoutY="104.0" text="Appointment ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="554.0" layoutY="139.0" text="Bike Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="175.0" text="In Time" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="903.0" layoutY="294.0" text="Emp Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="214.0" text="Employee Information" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="687.0" layoutY="221.0" prefHeight="3.0" prefWidth="552.0" />
+      <TableView fx:id="tblemp" layoutX="530.0" layoutY="243.0" prefHeight="214.0" prefWidth="336.0">
+        <columns>
+          <TableColumn prefWidth="127.0" text="Employee ID" />
+          <TableColumn prefWidth="208.0" text="Employee Name" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtsid" editable="false" focusColor="WHITE" layoutX="693.0" layoutY="58.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtappid" editable="false" focusColor="WHITE" layoutX="693.0" layoutY="95.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtbikeNum" focusColor="WHITE" labelFloat="true" layoutX="693.0" layoutY="135.0" prefHeight="26.0" prefWidth="210.0" promptText="Search" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtIntime" editable="false" focusColor="WHITE" layoutX="693.0" layoutY="170.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnAdd" layoutX="1141.0" layoutY="326.0" onAction="#AddEmp" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #277283;" styleClass="btn_add" text="Add" textFill="WHITE" />
+      <JFXButton fx:id="btnRemove" layoutX="1061.0" layoutY="326.0" onAction="#Remove" prefHeight="26.0" prefWidth="75.0" styleClass="btn_mini" stylesheets="@style/Style.css" text="Remove" />
+      <JFXButton fx:id="btnMakeSer" layoutX="1034.0" layoutY="415.0" onAction="#MakeService" prefHeight="41.0" prefWidth="210.0" style="-fx-background-color: #FFC300;" text="Make Service">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbname" focusColor="WHITE" layoutX="1001.0" layoutY="289.0" onAction="#setEmp" prefHeight="26.0" prefWidth="189.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <TableView fx:id="tblplatform" layoutX="1121.0" layoutY="33.0" prefHeight="178.0" prefWidth="106.0">
+        <columns>
+          <TableColumn prefWidth="100.0" text="Platform No" />
+        </columns>
+      </TableView>
+      <Label layoutX="977.0" layoutY="40.0" text="Working PlatForm" textFill="#bfb1b1" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbPlatfoem" focusColor="WHITE" layoutX="1001.0" layoutY="240.0" onAction="#setPtatform" prefHeight="26.0" prefWidth="189.0" unFocusColor="WHITE" />
+      <Label layoutX="904.0" layoutY="245.0" text="Platform No" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

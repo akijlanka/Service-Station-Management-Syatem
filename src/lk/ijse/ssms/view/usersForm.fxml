@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="1257.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.UsersFormController">
+   <children>
+      <JFXTextField fx:id="txtid" editable="false" labelFloat="true" layoutX="99.0" layoutY="54.0" prefHeight="26.0" prefWidth="151.0" promptText="User ID" AnchorPane.leftAnchor="99.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtname" labelFloat="true" layoutX="99.0" layoutY="106.0" prefHeight="28.0" prefWidth="373.0" promptText="Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtemail" labelFloat="true" layoutX="99.0" layoutY="156.0" prefHeight="28.0" prefWidth="373.0" promptText="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbPosition" editable="true" layoutX="99.0" layoutY="209.0" prefHeight="26.0" prefWidth="373.0" promptText="Position" />
+      <JFXTextField fx:id="txtUsername" layoutX="97.0" layoutY="260.0" prefHeight="26.0" prefWidth="373.0" promptText="User Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" layoutX="97.0" layoutY="313.0" prefHeight="26.0" prefWidth="373.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" layoutX="105.0" layoutY="405.0" onAction="#AddUser" prefHeight="27.0" prefWidth="93.0" styleClass="btn_add" stylesheets="@style/Style.css" text="Add" />
+      <JFXButton fx:id="btnUpdate" layoutX="235.0" layoutY="405.0" onAction="#UpdateUser" prefHeight="27.0" prefWidth="93.0" styleClass="tf_btn" stylesheets="@style/Style.css" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="363.0" layoutY="405.0" onAction="#DeleteUser" prefHeight="27.0" prefWidth="93.0" styleClass="btn_close" stylesheets="@style/Style.css" text="Delete" />
+      <TableView fx:id="tblUser" layoutX="535.0" layoutY="24.0" onMouseClicked="#select" prefHeight="418.0" prefWidth="666.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="568.0" AnchorPane.topAnchor="24.0">
+        <columns>
+          <TableColumn prefWidth="64.0" text="UserID" />
+          <TableColumn prefWidth="138.0" text="Name" />
+            <TableColumn prefWidth="86.0" text="Position" />
+            <TableColumn prefWidth="173.0" text="Email" />
+            <TableColumn prefWidth="99.0" text="User Name" />
+            <TableColumn prefWidth="102.0" text="Password" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

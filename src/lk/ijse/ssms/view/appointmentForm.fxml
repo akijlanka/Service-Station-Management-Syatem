@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" prefHeight="495.0" prefWidth="1257.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.AppointmentFormController">
+   <children>
+      <Pane layoutX="1.0" layoutY="-1.0" prefHeight="34.0" prefWidth="1257.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#146166" height="12.47" radius="2.6175" width="0.0" />
+         </effect>
+         <children>
+            <Label layoutX="44.0" layoutY="9.0" text="Apointment" textFill="#146166">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="48.0" layoutX="9.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/sh.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtCusName" layoutX="99.0" layoutY="143.0" onAction="#moveDate" prefHeight="28.0" prefWidth="373.0" promptText="Customer Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="txtDate" layoutX="99.0" layoutY="206.0" onAction="#moveTpn" prefHeight="26.0" prefWidth="373.0" promptText="Date" />
+      <JFXTextField fx:id="txtTPN" labelFloat="true" layoutX="99.0" layoutY="269.0" onAction="#moveBikeNum" prefHeight="28.0" prefWidth="373.0" promptText="Telephone Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBikeNumber" labelFloat="true" layoutX="99.0" layoutY="334.0" onAction="#moveAdd" prefHeight="28.0" prefWidth="373.0" promptText="Bike Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnadd" layoutX="99.0" layoutY="419.0" onAction="#MakeApp" prefHeight="28.0" prefWidth="154.0" styleClass="btnadd" stylesheets="@style/dashStyle.css" text="Appointment" />
+      <JFXButton fx:id="btnDelete" layoutX="375.0" layoutY="419.0" onAction="#Delete" prefHeight="28.0" prefWidth="99.0" styleClass="btndelete" stylesheets="@style/dashStyle.css" text="Cancel" />
+      <JFXButton fx:id="btnChange" layoutX="264.0" layoutY="419.0" onAction="#Update" prefHeight="28.0" prefWidth="99.0" styleClass="btnchange" stylesheets="@style/dashStyle.css" text="Change" />
+      <TableView fx:id="tblAppointment" layoutX="575.0" layoutY="54.0" onMouseClicked="#selectOn" prefHeight="417.0" prefWidth="663.0">
+        <columns>
+          <TableColumn fx:id="columnAid" prefWidth="75.0" styleClass="row" text="App ID" />
+          <TableColumn fx:id="coloumnCusname" prefWidth="151.0" styleClass="row" text="Customer Name" />
+            <TableColumn fx:id="columnDate" prefWidth="135.0" styleClass="row" text="Date" />
+            <TableColumn fx:id="columnTPnum" prefWidth="150.0" styleClass="row" text="TP-Numaber" />
+            <TableColumn fx:id="columnBikenum" prefWidth="151.0" styleClass="row" text="Bike Number" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtappid" editable="false" labelFloat="true" layoutX="101.0" layoutY="87.0" onAction="#moveCusname" prefHeight="28.0" prefWidth="373.0" promptText="Appointment ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="btnrefresh" fitHeight="34.0" fitWidth="28.0" layoutX="38.0" layoutY="418.0" onMouseClicked="#Refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/refresh.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labCusname" layoutX="101.0" layoutY="176.0" prefHeight="16.0" prefWidth="251.0" textFill="#f50202">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </Label>
+      <Label fx:id="labCustp" layoutX="99.0" layoutY="305.0" prefHeight="16.0" prefWidth="251.0" textFill="#f50202">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

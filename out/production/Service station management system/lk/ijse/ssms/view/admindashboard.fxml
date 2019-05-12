@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #146166;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.DashboardController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="78.0" prefWidth="1366.0" style="-fx-background-color: #146166;">
+         <effect>
+            <DropShadow height="0.0" radius="4.75" />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c70039" height="180.0" layoutX="-105.0" layoutY="-29.0" rotate="-45.0" stroke="#c70039" strokeType="INSIDE" width="311.0" />
+            <JFXButton fx:id="btnclose" layoutX="1334.0" layoutY="4.0" onAction="#close" styleClass="btn_close" stylesheets="@style/Style.css" text="X" />
+            <JFXButton fx:id="btnminimize" layoutX="1301.0" layoutY="4.0" onAction="#minimize" prefHeight="26.0" prefWidth="27.0" styleClass="btn_mini" stylesheets="@style/Style.css" text="-" />
+            <Label layoutX="7.0" layoutY="6.0" text="DUMIDU AUTO SERVICE STATION" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="45.0" text="Service Station Management System" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtdate" layoutX="1164.0" layoutY="37.0" prefHeight="26.0" prefWidth="106.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="txttime" layoutX="1269.0" layoutY="37.0" prefHeight="25.0" prefWidth="86.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="39.0" layoutY="525.0" size="45" />
+      <Label layoutX="34.0" layoutY="535.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="111.0" layoutY="67.0" prefHeight="707.0" prefWidth="1257.0" style="-fx-background-color: #D5D9DA;">
+         <children>
+            <Pane fx:id="btnapp" layoutX="20.0" layoutY="515.0" onMouseClicked="#appointment" prefHeight="123.0" prefWidth="267.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="970.0" AnchorPane.topAnchor="515.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="59.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/clock.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutY="84.0" prefHeight="39.0" prefWidth="267.0" style="-fx-background-color: #C70039;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="7.0" text="APPOINTMENT" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="197.0" layoutY="4.0" prefHeight="22.0" prefWidth="67.0" text="Today" textFill="#8a6c6c">
+                     <font>
+                        <Font name="FontAwesome Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtAppcount" layoutX="240.0" layoutY="30.0" text="0" textFill="#5e0707">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="64.0" text="Last Appointment" textFill="#837e7e" />
+                  <Label fx:id="txtLastTime" layoutX="195.0" layoutY="64.0" prefHeight="16.0" prefWidth="67.0" textFill="#837e7e" />
+               </children>
+            </Pane>
+            <Label layoutX="22.0" layoutY="647.0" text="Dashboard" textFill="#146166">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="btnbike" layoutX="301.0" layoutY="515.0" onMouseClicked="#viewservice" prefHeight="123.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css" AnchorPane.topAnchor="515.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="59.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/link.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutY="84.0" prefHeight="39.0" prefWidth="224.0" style="-fx-background-color: #C70039;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="7.0" text="SERVICE BIKE" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="158.0" layoutY="5.0" prefHeight="25.0" prefWidth="59.0" text="+100" textFill="#5e0707">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnemp" layoutX="539.0" layoutY="515.0" onMouseClicked="#empAdd" prefHeight="123.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css" AnchorPane.topAnchor="515.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="59.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/mechanic.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutY="84.0" prefHeight="39.0" prefWidth="224.0" style="-fx-background-color: #C70039;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="7.0" text="EMOPLOYEE" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label fx:id="txtEmpcount" layoutX="202.0" layoutY="4.0" text="0" textFill="#5e0707">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="62.0" text="Last Join" textFill="#837e7e" />
+                  <Label fx:id="txtlastDate" layoutX="134.0" layoutY="62.0" prefHeight="16.0" prefWidth="86.0" textFill="#837e7e" />
+               </children>
+            </Pane>
+            <Pane fx:id="btnBikemodel" layoutX="776.0" layoutY="515.0" onMouseClicked="#addbikemodel" prefHeight="55.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css" AnchorPane.topAnchor="515.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="170.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/clock.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #C70039;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="7.0" layoutY="15.0" text="BIKE MODEL" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Circle fill="#c70039" layoutX="199.0" layoutY="36.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Label fx:id="txtBikemcount" layoutX="191.0" layoutY="27.0" text="0" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane fx:id="btnitem" layoutX="776.0" layoutY="582.0" onMouseClicked="#itemAdd" prefHeight="55.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="170.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/check.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #C70039;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="14.0" text="ITEM" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Circle fill="#c70039" layoutX="198.0" layoutY="37.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Label fx:id="txtitemCount" layoutX="194.0" layoutY="28.0" text="0" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane fx:id="btnreport" layoutX="1014.0" layoutY="515.0" onMouseClicked="#viewreport" prefHeight="55.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css" AnchorPane.topAnchor="515.0">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="171.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/stats.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #33B256;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="15.0" text="REPORT" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="btnnote" layoutX="1014.0" layoutY="582.0" onMouseClicked="#addnote" prefHeight="55.0" prefWidth="224.0" style="-fx-background-color: white;" styleClass="pane" stylesheets="@style/tableStyle.css">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="12.14" radius="7.0875" width="18.21" />
+               </effect>
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="35.0" layoutX="171.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/checked.png" />
+                     </image>
+                  </ImageView>
+                  <Pane prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: #33B256;" stylesheets="@style/tableStyle.css">
+                     <children>
+                        <Label layoutX="8.0" layoutY="15.0" text="NOTE" textFill="WHITE">
+                           <font>
+                              <Font name="FontAwesome Regular" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Circle fill="#c70039" layoutX="204.0" layoutY="38.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Label layoutX="200.0" layoutY="30.0" text="2" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Label layoutX="596.0" layoutY="651.0" text="Version 1.0" textFill="#756969" />
+            <AnchorPane fx:id="lodepane" prefHeight="495.0" prefWidth="1257.0" style="-fx-background-color: #D5D9DA;">
+               <children>
+                  <Label layoutX="12.0" layoutY="10.0" text="Home" textFill="#146166">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="0.0" width="0.0" />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="33.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/power.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="715.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnsetting" fitHeight="46.0" fitWidth="48.0" layoutX="32.0" layoutY="577.0" onMouseClicked="#lodepane" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/management.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="625.0" text="Setting" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Circle fx:id="btnshape" fill="#ffffff27" layoutX="57.0" layoutY="363.0" onMouseClicked="#getServise" radius="43.0" stroke="WHITE" strokeType="INSIDE" styleClass="servicebtn" />
+      <FontAwesomeIconView fx:id="btndash" fill="WHITE" glyphName="" layoutX="36.0" layoutY="369.0" onMouseClicked="#lodeSevice" size="45" text="" />
+      <Label layoutX="30.0" layoutY="374.0" styleClass="servicebtn" stylesheets="@style/Style.css" text="Service" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="495.0" prefWidth="1257.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.ServicesController">
+   <children>
+      <Pane fx:id="lodePane" layoutY="35.0" prefHeight="472.0" prefWidth="1257.0" style="-fx-background-color: #053843;" />
+      <Pane fx:id="btnWaitapp" onMouseClicked="#lodeAppointment" onMousePressed="#change" prefHeight="35.0" prefWidth="419.0" styleClass="btnapp" stylesheets="@style/Style.css">
+         <children>
+            <Label layoutX="121.0" layoutY="7.0" text="Wating Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="82.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/check.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#17bf5a" layoutX="391.0" layoutY="13.0" radius="6.0" stroke="#17bf5a" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane fx:id="btnEnd" layoutX="838.0" onMouseClicked="#lodeEnd" onMousePressed="#change3" prefHeight="35.0" prefWidth="419.0" styleClass="btnend" stylesheets="@style/Style.css">
+         <children>
+            <Label layoutX="191.0" layoutY="7.0" text="End Work" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="154.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/checked.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#de0c0b" layoutX="396.0" layoutY="13.0" radius="6.0" stroke="#de0b0b" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane fx:id="btnOngoing" layoutX="419.0" onMouseClicked="#lodeOngoing" onMousePressed="#change2" prefHeight="35.0" prefWidth="419.0" styleClass="btnongoing" stylesheets="@style/Style.css">
+         <children>
+            <Label layoutX="174.0" layoutY="6.0" text="Ongoing" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="141.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/mechanic.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#e0c00a" layoutX="391.0" layoutY="12.0" radius="6.0" stroke="#e0c00a" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

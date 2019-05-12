@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="1257.0" style="-fx-background-color: #053843;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.OnGoingFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="7.0" text="On Going Services" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblService" layoutX="15.0" layoutY="34.0" onMouseClicked="#selectService" prefHeight="243.0" prefWidth="500.0">
+         <columns>
+            <TableColumn prefWidth="85.00003051757812" text="SID" />
+            <TableColumn prefWidth="54.0" text="AID" />
+            <TableColumn prefWidth="123.0" text="Bike Number" />
+            <TableColumn prefWidth="110.0" text="In Time" />
+            <TableColumn prefWidth="126.0" text="Platform No" />
+         </columns>
+      </TableView>
+      <Separator layoutX="169.0" layoutY="15.0" prefHeight="3.0" prefWidth="346.0" />
+      <Label layoutX="15.0" layoutY="287.0" text="Relate Employee" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblemp" layoutX="15.0" layoutY="313.0" prefHeight="143.0" prefWidth="500.0">
+         <columns>
+            <TableColumn prefWidth="209.0" text="Employee ID" />
+            <TableColumn prefWidth="289.0" text="Employee Name" />
+         </columns>
+      </TableView>
+      <Separator layoutX="133.0" layoutY="294.0" prefHeight="3.0" prefWidth="382.0" />
+      <Label layoutX="530.0" layoutY="9.0" text="On Going Service" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="676.0" layoutY="17.0" prefHeight="3.0" prefWidth="569.0" />
+      <Label layoutX="544.0" layoutY="39.0" text="Service Information" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="69.0" text="Service ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="103.0" text="Bike Number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="138.0" text="In Time" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="174.0" text="Out Time" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="925.0" layoutY="275.0" text="Item ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="924.0" layoutY="239.0" text="Item Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="213.0" text="Item Information" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="653.0" layoutY="220.0" prefHeight="3.0" prefWidth="586.0" />
+      <TableView fx:id="tblItem" layoutX="530.0" layoutY="242.0" prefHeight="216.0" prefWidth="365.0">
+         <columns>
+            <TableColumn prefWidth="122.0" text="Item Name" />
+            <TableColumn prefWidth="81.0" text="Item ID" />
+            <TableColumn prefWidth="53.0" text="Qty" />
+            <TableColumn prefWidth="105.0" text="Total" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtsid" editable="false" focusColor="WHITE" layoutX="703.0" layoutY="57.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtbikenum" editable="false" focusColor="WHITE" layoutX="703.0" layoutY="94.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtintime" editable="false" focusColor="WHITE" layoutX="703.0" layoutY="132.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtouttime" editable="false" focusColor="WHITE" layoutX="703.0" layoutY="169.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbItemname" editable="true" focusColor="WHITE" layoutX="1025.0" layoutY="225.0" onAction="#selectItem" prefHeight="26.0" prefWidth="189.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtItemid" editable="false" focusColor="WHITE" labelFloat="true" layoutX="1024.0" layoutY="261.0" prefHeight="26.0" prefWidth="189.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnadd" layoutX="1163.0" layoutY="369.0" onAction="#AddItem" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #277283;" styleClass="btn_add" text="Add" textFill="WHITE" />
+      <JFXButton fx:id="btnremove" layoutX="1083.0" layoutY="369.0" prefHeight="26.0" prefWidth="75.0" styleClass="btn_mini" stylesheets="@style/Style.css" text="Remove" />
+      <Label layoutX="926.0" layoutY="310.0" text="Item Qty" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtqty" focusColor="WHITE" labelFloat="true" layoutX="1025.0" layoutY="301.0" prefHeight="26.0" prefWidth="189.0" promptText="Insert Qty" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label layoutX="927.0" layoutY="343.0" text="Item Price" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtprice" editable="false" focusColor="WHITE" layoutX="1026.0" layoutY="334.0" prefHeight="26.0" prefWidth="189.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnFinesh" layoutX="1034.0" layoutY="415.0" onAction="#Finesih" prefHeight="41.0" prefWidth="210.0" style="-fx-background-color: #95BEE1;" text="Payment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

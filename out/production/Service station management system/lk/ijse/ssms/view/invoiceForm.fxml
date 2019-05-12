@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="1257.0" style="-fx-background-color: #053843;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.InvoiceFormController">
+   <children>
+      <TableView fx:id="tblSevise" layoutX="9.0" layoutY="9.0" onMouseClicked="#select" prefHeight="452.0" prefWidth="323.0">
+        <columns>
+          <TableColumn prefWidth="86.0" text="SID" />
+          <TableColumn prefWidth="92.0" text="AID" />
+            <TableColumn prefWidth="148.0" text="Bike Number" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblIteminformation" layoutX="342.0" layoutY="31.0" prefHeight="218.0" prefWidth="323.0">
+        <columns>
+          <TableColumn prefWidth="85.99996948242188" text="Item Code" />
+          <TableColumn prefWidth="63.999969482421875" text="Name" />
+            <TableColumn prefWidth="75.0" text="Qty" />
+            <TableColumn prefWidth="95.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblEmpinformation" layoutX="342.0" layoutY="277.0" prefHeight="184.0" prefWidth="323.0">
+        <columns>
+          <TableColumn prefWidth="162.0" text="Employee ID" />
+          <TableColumn prefWidth="156.0" text="Employee Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="342.0" layoutY="254.0" text="Employee Information" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="342.0" layoutY="9.0" text="Item Information" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="7.0" text="Bike Information" textFill="#9a7f7f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="827.0" layoutY="15.0" prefHeight="2.0" prefWidth="413.0" />
+      <Label layoutX="696.0" layoutY="42.0" text="BID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtbid" editable="false" focusColor="WHITE" layoutX="789.0" layoutY="30.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label layoutX="697.0" layoutY="71.0" text="Bike Num" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBikeName" editable="false" focusColor="WHITE" layoutX="790.0" layoutY="59.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label layoutX="697.0" layoutY="99.0" text="Model" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBikeModel" editable="false" focusColor="WHITE" layoutX="790.0" layoutY="87.0" prefHeight="26.0" prefWidth="210.0" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label layoutX="697.0" layoutY="128.0" text="Mile(Km)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtmile" focusColor="WHITE" layoutX="790.0" layoutY="116.0" prefHeight="26.0" prefWidth="210.0" promptText="Insaert" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label layoutX="683.0" layoutY="171.0" text="Service Information" textFill="#9a7f7f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="849.0" layoutY="179.0" prefHeight="3.0" prefWidth="391.0" />
+      <Label layoutX="684.0" layoutY="255.0" text="Invoice No :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1011.0" layoutY="200.0" prefHeight="16.0" prefWidth="45.0" text="Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="200.0" prefHeight="3.0" prefWidth="39.0" text="AID :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="849.0" layoutY="200.0" prefHeight="3.0" prefWidth="39.0" text="SID :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="685.0" layoutY="254.0" textFill="#ff8383" />
+      <Label layoutX="682.0" layoutY="229.0" text="Invoice" textFill="#9a7f7f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="747.0" layoutY="237.0" prefHeight="3.0" prefWidth="490.0" />
+      <JFXTextField fx:id="txtempchage" focusColor="WHITE" labelFloat="true" layoutX="690.0" layoutY="296.0" onAction="#AddEmpcharge" prefHeight="26.0" prefWidth="210.0" promptText="Employee Chage" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnAddBike" layoutX="1150.0" layoutY="64.0" onAction="#Addbike" prefHeight="26.0" prefWidth="87.0" styleClass="tf_btn" stylesheets="@style/Style.css" text="Add Bike" textFill="WHITE" />
+      <Label layoutX="1072.0" layoutY="24.0" prefHeight="18.0" prefWidth="155.0" text="If you not visibale BID," textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="1073.0" layoutY="38.0" prefHeight="18.0" prefWidth="175.0" text="You should Add New Bike Details" textFill="#bfb1b1">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="940.0" layoutY="254.0" prefHeight="20.0" prefWidth="101.0" text="Sub Total :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="928.0" layoutY="326.0" prefHeight="21.0" prefWidth="122.0" text="Net Total :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnInvoice" layoutX="1045.0" layoutY="418.0" onAction="#Payment" prefHeight="37.0" prefWidth="191.0" styleClass="btn_mini" stylesheets="@style/Style.css" text="Invoice">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtbalance" focusColor="WHITE" labelFloat="true" layoutX="691.0" layoutY="386.0" onAction="#AddBalance" prefHeight="26.0" prefWidth="210.0" promptText="Cash" styleClass="txtcol" stylesheets="@style/Style.css" unFocusColor="WHITE" />
+      <Label fx:id="txtAid" layoutX="746.0" layoutY="200.0" prefHeight="16.0" prefWidth="87.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtSid" layoutX="896.0" layoutY="199.0" prefHeight="16.0" prefWidth="87.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="1073.0" layoutY="199.0" prefHeight="18.0" prefWidth="133.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtInvNo" layoutX="773.0" layoutY="255.0" prefHeight="18.0" prefWidth="133.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtSubtot" layoutX="1045.0" layoutY="256.0" prefHeight="20.0" prefWidth="184.0" text="0000.00" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtNettot" layoutX="1058.0" layoutY="326.0" prefHeight="16.0" prefWidth="184.0" text="0000.00" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="963.0" layoutY="359.0" prefHeight="20.0" prefWidth="101.0" text="Balance :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtgetbalnce" layoutX="1061.0" layoutY="359.0" prefHeight="20.0" prefWidth="184.0" text="0000.00" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

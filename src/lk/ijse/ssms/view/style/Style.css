@@ -1,0 +1,104 @@
+.pane_bac{
+    -fx-background-color: transparent;
+}
+.pane{
+    -fx-background-color: #973f3f;
+}
+.btn-white{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e2dddd;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+}
+.white-pane{
+    -fx-background-color: white;
+}
+
+.tf_box{
+    -fx-background-color: transparent;
+}
+
+.tf_btn{
+    -fx-background-color: #207235;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+
+}
+.opacitypane{
+    -fx-background-color:black;
+    -fx-opacity:0.5;
+
+}
+.labels{
+    -fx-text-fill: white;
+
+}
+.btn_close{
+    -fx-background-color:red;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+
+
+}
+.btn_mini{
+    -fx-background-color:green;
+    -fx-text-fill: white;
+
+}
+.btn_add{
+    -fx-background-color:darkcyan;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.btn_delete{
+    -fx-background-color:darkred;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+.btnapp
+{
+    -fx-background-color:#277283;
+}
+
+.btnapp:hover{
+    -fx-background-color: #053843;
+}
+
+.btnongoing{
+    -fx-background-color:#277283;
+
+}
+.btnongoing:hover{
+    -fx-background-color: #053843;
+
+}
+
+.btnend{
+    -fx-background-color:#277283;
+
+}
+
+.btnend:hover{
+    -fx-background-color: #053843;
+
+}
+
+.txtcol{
+    -fx-text-fill: white;
+    -fx-fill: white;
+
+}
+
+.servicebtn:hover{
+    -fx-fill: #C70039;
+}
+
+
+
+
+
+
+

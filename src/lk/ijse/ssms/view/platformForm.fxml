@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="472.0" prefWidth="1257.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ssms.controller.PlatfomrFormController">
+   <children>
+      <JFXTextField fx:id="txtpid" layoutX="74.0" layoutY="48.0" promptText="PID" AnchorPane.leftAnchor="99.0" />
+      <JFXTextField fx:id="txtpNo" layoutX="99.0" layoutY="102.0" promptText="Platform No(NO1)" AnchorPane.leftAnchor="99.0" />
+      <TableView fx:id="tblp" layoutX="99.0" layoutY="153.0" onMouseClicked="#select" prefHeight="290.0" prefWidth="297.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="PID" />
+          <TableColumn prefWidth="219.0" text="Platform No" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAdd" layoutX="298.0" layoutY="47.0" onAction="#AddUser" prefHeight="27.0" prefWidth="93.0" styleClass="btn_add" stylesheets="@style/Style.css" text="Add" />
+      <JFXButton fx:id="btnDelete" layoutX="298.0" layoutY="101.0" onAction="#DeleteUser" prefHeight="27.0" prefWidth="93.0" styleClass="btn_close" stylesheets="@style/Style.css" text="Delete" />
+   </children>
+</AnchorPane>
